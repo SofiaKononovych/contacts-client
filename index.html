@@ -54,6 +54,7 @@
           align-items: center;
           justify-content: space-between;
           padding: 20px;
+          gap: 20px;
       }
 
       .form {
@@ -78,37 +79,27 @@
 <h1 class='title'>Contacts app</h1>
 
 <ul class='contacts'>
-  <li class='contact'>
-    <h2 class='contact__title'>
-      Wife
-    </h2>
-    <a href='tel:+380111111111'>+380111111111</a>
-  </li>
-  <li class='contact'>
-    <h2 class='contact__title'>
-      Wife
-    </h2>
-    <a href='tel:+380111111111'>+380111111111</a>
-  </li>
 </ul>
 
 <form action='' class='form'>
   <label class='input'>
     Contact name
-    <input type='text' class='input__input' name='name'>
+    <input type='text' class='input__input' name='name' data-min = "4" data-max = "20">
     <span class='input__message'></span>
   </label>
   <label class='input'>
     Contact number
-    <input type='text' class='input__input' name='number'>
+    <input type='text' class='input__input' name='number' data-min = "12" data-max = "20">
     <span class='input__message'></span>
   </label>
-  <button type='submit'>
+  <button type='submit' name='submit'>
     Send
   </button>
 </form>
 
 <script src='src/index.js' type='module'></script>
 <script src='src/check.js' type='module'></script>
+<script src='src/renders.js' type='module'></script>
+
 </body>
 </html>
